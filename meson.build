@@ -28,7 +28,7 @@ add_project_arguments(
 
 conf_data = configuration_data()
 
-wlr_inc = include_directories('.', 'include')
+wlr_inc = include_directories('.', 'include/wlr')
 
 cc = meson.get_compiler('c')
 
