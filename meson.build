@@ -157,6 +157,7 @@ pkgconfig.generate(
 	filebase: meson.project_name(),
 	name: meson.project_name(),
 	description: 'Wayland compositor library',
+	subdirs: 'wlr',
 )
 
 git = find_program('git', required: false)
