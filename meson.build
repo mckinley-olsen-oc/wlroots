@@ -28,7 +28,7 @@ add_project_arguments(
 
 conf_data = configuration_data()
 
-wlr_inc = include_directories('.', 'include/wlr')
+wlr_inc = include_directories('.', 'include')
 
 cc = meson.get_compiler('c')
 
@@ -118,7 +118,7 @@ lib_wlr = library(
 	version: '.'.join(so_version),
 	link_whole: wlr_parts,
 	dependencies: wlr_deps,
-	include_directories: wlr_inc,
+	include_directories: 'include/wlr',
 	install: true,
 	link_args : symbols_flag,
 	link_depends: symbols_file,
