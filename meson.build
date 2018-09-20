@@ -84,7 +84,6 @@ subdir('util')
 subdir('xcursor')
 subdir('xwayland')
 
-subdir('include')
 subdir('include/wlr')
 
 wlr_parts += [
