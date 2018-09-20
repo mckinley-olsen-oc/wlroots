@@ -85,6 +85,7 @@ subdir('xcursor')
 subdir('xwayland')
 
 subdir('include')
+subdir('include/wlr')
 
 wlr_parts += [
 	lib_wl_protos,
@@ -118,7 +119,7 @@ lib_wlr = library(
 	version: '.'.join(so_version),
 	link_whole: wlr_parts,
 	dependencies: wlr_deps,
-	include_directories: 'include/wlr',
+	include_directories: wlr_inc,
 	install: true,
 	link_args : symbols_flag,
 	link_depends: symbols_file,
